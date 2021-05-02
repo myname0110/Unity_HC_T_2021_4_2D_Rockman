@@ -168,6 +168,7 @@ public class Car : MonoBehaviour
     }
     #endregion
 
+
     #region // 舉例：
     // 三個方法 1. 以時數 50 開車 2. 時數 100 3. 時數300
     // 加新功能 要有音效
@@ -188,20 +189,31 @@ public class Car : MonoBehaviour
         print("開車時數" + 300);
         print("開車音效");
     }
-
-    //  用參數解決 Paramater
+    #endregion
+    #region //  用參數解決 Paramater
     //  參數語法：類型 參數名稱
     /// <summary>
-    /// 開車
+    /// 開車 
     /// </summary>
     /// <param name="speed">開車的時數</param>
     /// <param name="sonud">開車的音效</param>
+    #endregion
+
+    #region
     //  有預設值得參數只能寫在最右邊
     private void Drive(int speed, string sonud = "咻~", string effect = "灰塵效果")
     {
-        print("開車時數：" + speed);
-        print("開車音效：" + sonud);
-        print("特效：" + effect);
+        print("開車時數" + speed);
+        print("開車音效");
+    }
+
+    ///<summary> BMI計算方法</summary>
+    ///<param name="height">請輸入身高 (單位為公尺)</param>
+    ///<param name="weight">請輸入體重 (單位為公尺)</param>
+    ///<returns></returns>
+    private float BMI (float height, float weight)
+    {
+        return weight / (height * height);
     }
     #endregion
 }

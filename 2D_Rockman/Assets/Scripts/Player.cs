@@ -2,6 +2,7 @@
 
 public class Player : MonoBehaviour
 {
+    #region //角色動作
     [Header("移動速度"), Range(0, 1000)]
     public float speed = 10.5f;
     [Header("跳躍高度"), Range(0, 3000)]
@@ -22,4 +23,44 @@ public class Player : MonoBehaviour
     private AudioSource aud;
     private Rigidbody2D rig;
     private Animator ani;
+
+    #endregion
+
+    #region 方法
+
+    /// <summary>
+    /// 移動
+    /// </summary>
+    private void Move()
+    {
+        
+    }
+
+    ///<summary>跳躍</summary>
+    private void Jump()
+    {
+
+    }
+
+    ///<summary>開槍</summary>
+
+    private void Fire()
+    {
+        
+    }
+
+    ///<summary>受傷</summary>
+    private void Hit(float Damage)
+    {
+        
+    }
+
+    ///<summary>死亡</summary>
+    private bool Dead()
+    {
+        return false;
+    }
+
+   
+    #endregion
 }
