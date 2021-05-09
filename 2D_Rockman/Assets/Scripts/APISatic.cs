@@ -7,6 +7,9 @@ public class APISatic : MonoBehaviour
     // 認識靜態 API
     // 包括關鍵字 static 就是靜態
 
+    public Vector3 a = new Vector3(1, 1, 1);
+    public Vector3 b = new Vector3(22, 22, 22);
+
     private void Start()
     {
         #region // 屬性 欄位 要知道如何存取
@@ -35,14 +38,28 @@ public class APISatic : MonoBehaviour
         #region 練習
         print("攝影機數量" + Camera.allCamerasCount);
         print("重力：" + Physics2D.gravity);
+
+        Physics2D.gravity = new Vector2(0, -20);
+        print("重力：" + Physics2D.gravity);
+
+        Application.OpenURL("https://unity.com/");
+        float f = Mathf.Floor(9.999f);
+        print("去掉小數點的結果:");
+
+        float dis = Vector3.Distance(a, b);
+        print("A 與 B 的距離:" + dis);
+
         #endregion
     }
 
     private void Update()
     {
         #region 練習
-        print("玩家是否按下任意鍵" + Input.anyKeyDown);
-        print("重力：" + Time.time);
+        // print("玩家是否按下任意鍵" + Input.anyKeyDown);
+        // print("重力：" + Time.time);
+
+        bool B = Input.GetKeyDown("space");
+        print("是否按下空白建:" + b);
         #endregion
     }
 }
